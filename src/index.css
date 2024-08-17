@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*{
+  padding: 50 0 0 0;
+  margin: 0;
+}
+/* Juner Formatting */
+/* https://coolors.co/ebe9e9-f3f8f2-3581b8-fcb07e-dee2d6 */
+.navbar-toggler{
+  background-color: #fff !important;
+}
+.nav-format {
+  background-color: #3581B8;
+  font-size: 1.2rem;
+  padding: 20px !important;
+}
+.nav-link, .navbar-brand{
+  color: #EBE9E9 !important ;
+  padding: 10px;
+  /* border-radius: 10px 10px 0px 0px; */
+}
+.nav-link {
+  margin-left: 10px;
+}
+.nav-link:hover{
+  color: #3581B8 !important;
+  background-color: #EBE9E9 !important;
+  border-top: 1px solid #FCB07E !important;
+  border-bottom: 1px solid #FCB07E !important;
+}
+/* designing main.js */
+.main{
+  width: 100%;
+  height: 100vh;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.7);
+}
+
+
+/* styling carousel image */
+.c-item{
+  height: 100vh;
+}
+
+.image-wrapper{
+  margin: 0px 0px;
+}
+.marquee-style img{
+  width: 30%;
+  margin: 0px -200px;
+}
+.fueling{
+  background-color: #EBE9E9 ;
+}
+.fueling-content{
+  color: #fff;
+  background: linear-gradient(45deg, #113c5c, #774321) ;
+  padding: 20px 20px;
+  border-radius: 25px;
+}
+.card-image-bg{
+  background: linear-gradient(60deg, #0d4e80, #95ade0) ;
+}
+.work-link{
+  color: #0d4e80;
+  margin-right: 10px;
+}
+.work-link:hover{
+  color: #FCB07E;
+  margin-right: 0px;
+}
+.footer-link {
+  color: #fff;
+}
+.footer-link ul li, .footer-link ul li a{
+  list-style: none;
+  color: #fff;
+}
+.footer-link ul li a {
+  text-decoration: none;
+}
+.footer-link ul li a:hover{
+  color: orange;
+}
