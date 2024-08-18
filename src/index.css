@@ -98,3 +98,48 @@ video {
 .footer-link ul li a:hover{
   color: orange;
 }
+.social-accounts ul li a{
+  text-decoration: none;
+  background-color: white !important;
+}
+.services-holder{
+  background-color: #113c5c;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  color: #fff;
+}.services-holder button{
+  background-color: transparent !important;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 10px 40px;
+}
+.services-sub{
+  background-color: #113c5c;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  color: #fff;
+}
+.services-sub-desc{
+  background-color: aliceblue;
+}
+.customer-login{
+  background-color: #0d4e80;
+}
+.customer-login a{
+  color: #FCB07E;
+  text-decoration: none;
+}
+.customer-login a:hover{
+  color: #EBE9E9;
+}
+.get-in-touch{
+  background-color: #f0833a;
+  border: 2px solid rgb(125, 134, 146);
+  border-radius: 25px;
+  padding: 10px 40px;
+  color: #fff;
+}
+.get-in-touch:hover{
+  border: 2px #0d4e80 solid;
+  color:#bed5e6;
+}

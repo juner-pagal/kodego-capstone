@@ -19,7 +19,7 @@ import wedoInfluencerMarketing from "../assets/images/wedo/wedo-influencermarket
 import wedoData from "../assets/images/wedo/wedo-data.png";
 import CounterUpPage from "./CounterUpPage";
 
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import videoBackground from "../assets/digital-marketing-discussion.mp4";
 import { Link } from "react-router-dom";
 
@@ -43,16 +43,16 @@ const Main = () => {
                         <Marquee className="marquee-style mt-4 mb-4" play>
                         
                         
-                            <img src={image1} />
-                            <img src={image2} />
-                            <img src={image3} />
-                            <img src={image4} />
-                            <img src={image5} />
-                            <img src={image6} />
-                            <img src={image7} />
-                            <img src={image8} />
-                            <img src={image9} />
-                            <img src={image10} />
+                            <img src={image1} alt="..."/>
+                            <img src={image2} alt="..."/>
+                            <img src={image3} alt="..."/>
+                            <img src={image4} alt="..."/> 
+                            <img src={image5} alt="..."/>
+                            <img src={image6} alt="..."/>
+                            <img src={image7} alt="..."/>
+                            <img src={image8} alt="..."/>
+                            <img src={image9} alt="..."/>
+                            <img src={image10} alt="..."/>
                         
                         </Marquee>
                     </div>
@@ -71,7 +71,7 @@ const Main = () => {
                     </div>
                     <div className="col-md-4 px-4">
                         <h6 className="display-6 fw-bold">Accelerated by Technology</h6>
-                        <p className="fw-semibold">JJC Digital Agency leverages its proprietary technology to seamlessly consolidate data from any source and apply AI creative element tagging – all within a unified platform. Combining holistic insights from multiple channels, including platform, offline and third-party data sources, enables you to optimize channel investment, refine targeting precision, and fine-tune message resonance mid-flight all through a single interface.</p>
+                        <p className="fw-semibold">JJC Digital Agency leverages its proprietary technology to seamlessly consolidate data from any source and apply AI creative element tagging all within a unified platform. Combining holistic insights from multiple channels, including platform, offline and third-party data sources, enables you to optimize channel investment, refine targeting precision, and fine-tune message resonance mid-flight all through a single interface.</p>
                     </div>
                     <div className="col-md-4 px-4">
                         <h6 className="display-6 fw-bold">Optimized by Data</h6>
