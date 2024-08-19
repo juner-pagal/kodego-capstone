@@ -32,8 +32,9 @@ function Navbar() {
                         <ul className="dropdown-menu px-3 fs-5"  style={{backgroundColor:"#3581B8"}}>
                             <li><Link className="nav-link" to="services/strategy">Strategy</Link></li>
                             <li><Link className="nav-link" to="services/paid-media">Paid Media</Link></li>
-                            <li><Link className="nav-link" to="services/inluencer-marketing">Influencer Marketing</Link></li>
+                            <li><Link className="nav-link" to="services/influencer-marketing">Influencer Marketing</Link></li>
                             <li><Link className="nav-link" to="services/data-ai">Data & AI</Link></li>
+                            <li><Link className="nav-link" to="services/in-housing">In-Housing</Link></li>
                         </ul>
                     </li>
                     <li className="nav-item">

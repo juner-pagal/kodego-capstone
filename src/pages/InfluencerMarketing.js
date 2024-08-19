@@ -1,19 +1,19 @@
-import servicesStrategy from "../assets/images/services/services-strategy.png"
+import servicesInfluencerMarketing from "../assets/images/services/services-influencer-marketing.png";
 import MarqueeSection from "../components/MarqueeSection";
-function Strategy(){
+function InfluencerMarketing(){
     return(
         <>
         <div className="card-image-bg">
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-6 services-holder mt-5 mb-5 p-5">
-                        <h6 className="display-6 mt-5">Strategy</h6>
-                        <h5 className="display-5 fw-bolder mt-4">Tailoring Your Paid Digital Strategy for Success At Scale</h5>
-                        <p className="fs-5 mt-4">Powered by experts, accelerated by technology, and optimized with data</p>
+                        <h6 className="display-6 mt-5">Influencer Marketing</h6>
+                        <h5 className="display-5 fw-bolder mt-4">Foster Authentic Connections and Maximize Content Strategies with Influencers</h5>
+                        <p className="fs-5 mt-4">Engage, captivate, and convert consumers with Influencer Marketing</p>
                         <button type="submit" className="btn btn-primary mt-4 mb-4">GET STARTED</button>
                     </div>
                     <div className="col-md-6 text-center">
-                        <img src={servicesStrategy} style={{width: "35rem", padding: "0px"}} alt="..."/>
+                        <img src={servicesInfluencerMarketing} style={{width: "35rem", padding: "0px"}} alt="..."/>
                     </div>
                 </div>
             </div>
@@ -23,28 +23,28 @@ function Strategy(){
 
                 <div className="row align-items-center mb-5 whats-in">
                     <div className="col-md-4 p-4 services-sub">
-                        <p className="fs-3 text-center align-items-center">Digital Channel Audit</p>
+                        <p className="fs-3 text-center align-items-center">Influencer Marketing Strategy</p>
                     </div>
                     <div className="col-md-8 p-4 services-sub-desc shadow">
-                        <p className="px-4 py-4 fs-5">We go beyond traditional media metrics by leveraging your first-party data, core metrics, and Google Analytics to conduct a thorough audit across your paid channels. Led by a team of seasoned ad operations specialists, we uncover vital trends, identify inefficiencies, and unlock scalable opportunities to craft a bespoke full-funnel strategy aligned with your KPIs and business objectives.</p>
+                        <p className="px-4 py-4 fs-5">Experience tailor-made influencer marketing campaigns crafted uniquely for your brand. With a deep understanding of your brand identity and marketing goals, we customize each campaign to achieve specific objectives, ensuring your brand’s message resonates across channels. </p>
                     </div>
                 </div>
 
                 <div className="row align-items-center mb-5 whats-in">
                     <div className="col-md-4 p-4 services-sub">
-                        <p className="fs-3 text-center align-items-center">Roadmap to Success</p>
+                        <p className="fs-3 text-center align-items-center">Influencer Partnership Management</p>
                     </div>
                     <div className="col-md-8 p-4 services-sub-desc shadow">
-                        <p className="px-4 py-4 fs-5">Together, we develop a comprehensive paid digital strategy to strengthen your brand’s social and industry leadership presence. By leveraging industry best practices and data-driven insights, we craft a scalable program tailored to your current needs and future growth.</p>
+                        <p className="px-4 py-4 fs-5">We handle influencer partnerships for you, including negotiating contracts, coordinating product shipments, providing detailed briefs, and more to ensure impactful collaborations. Effective communication and strategic planning are essential for building enduring relationships and maximizing campaign success.</p>
                     </div>
                 </div>
 
                 <div className="row align-items-center mb-5 whats-in">
                     <div className="col-md-4 p-4 services-sub">
-                        <p className="fs-3 text-center align-items-center">Industry Expertise</p>
+                        <p className="fs-3 text-center align-items-center">Influencer-Generated Content</p>
                     </div>
                     <div className="col-md-8 p-4 services-sub-desc shadow">
-                        <p className="px-4 py-4 fs-5">As performance marketing experts and partners with the leading social platforms, we keep up-to-date with the latest digital news and trends. We are your eyes and ears to help navigate the ever-changing digital space and identify opportunities as well as pitfalls.</p>
+                        <p className="px-4 py-4 fs-5">Boost your brand’s reach by re-purposing influencer content. Transform influencer collaborations into compelling Influencer-Generated Content (IGC), strategically amplified through your channels for wider audience engagement and enhanced visibility.</p>
                     </div>
                 </div>
                 <div className="text-center">
@@ -63,4 +63,4 @@ function Strategy(){
     )
 }
 
-export default Strategy;
+export default InfluencerMarketing;

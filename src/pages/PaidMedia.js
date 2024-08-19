@@ -1,19 +1,19 @@
-import servicesStrategy from "../assets/images/services/services-strategy.png"
+import servicesPaidMedia from "../assets/images/services/services-paid-media.png"
 import MarqueeSection from "../components/MarqueeSection";
-function Strategy(){
+function PaidMedia(){
     return(
         <>
         <div className="card-image-bg">
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-6 services-holder mt-5 mb-5 p-5">
-                        <h6 className="display-6 mt-5">Strategy</h6>
-                        <h5 className="display-5 fw-bolder mt-4">Tailoring Your Paid Digital Strategy for Success At Scale</h5>
-                        <p className="fs-5 mt-4">Powered by experts, accelerated by technology, and optimized with data</p>
+                        <h6 className="display-6 mt-5">Paid Media</h6>
+                        <h5 className="display-5 fw-bolder mt-4">Reach Your Ideal Customers At Every Stage of Their Journey</h5>
+                        <p className="fs-5 mt-4">Powered by data, executed by channel experts, optimized with actionable insights</p>
                         <button type="submit" className="btn btn-primary mt-4 mb-4">GET STARTED</button>
                     </div>
                     <div className="col-md-6 text-center">
-                        <img src={servicesStrategy} style={{width: "35rem", padding: "0px"}} alt="..."/>
+                        <img src={servicesPaidMedia} style={{width: "35rem", padding: "0px"}} alt="..."/>
                     </div>
                 </div>
             </div>
@@ -23,28 +23,28 @@ function Strategy(){
 
                 <div className="row align-items-center mb-5 whats-in">
                     <div className="col-md-4 p-4 services-sub">
-                        <p className="fs-3 text-center align-items-center">Digital Channel Audit</p>
+                        <p className="fs-3 text-center align-items-center">Full-Funnel Performance</p>
                     </div>
                     <div className="col-md-8 p-4 services-sub-desc shadow">
-                        <p className="px-4 py-4 fs-5">We go beyond traditional media metrics by leveraging your first-party data, core metrics, and Google Analytics to conduct a thorough audit across your paid channels. Led by a team of seasoned ad operations specialists, we uncover vital trends, identify inefficiencies, and unlock scalable opportunities to craft a bespoke full-funnel strategy aligned with your KPIs and business objectives.</p>
+                        <p className="px-4 py-4 fs-5">Our experts design and implement a custom full-funnel paid media plan, optimizing every touchpoint from awareness to conversion for maximum performance throughout the customer journey. From comprehensive market research to precise audience targeting and compelling campaign creation, we drive measurable results.</p>
                     </div>
                 </div>
 
                 <div className="row align-items-center mb-5 whats-in">
                     <div className="col-md-4 p-4 services-sub">
-                        <p className="fs-3 text-center align-items-center">Roadmap to Success</p>
+                        <p className="fs-3 text-center align-items-center">Incrementality</p>
                     </div>
                     <div className="col-md-8 p-4 services-sub-desc shadow">
-                        <p className="px-4 py-4 fs-5">Together, we develop a comprehensive paid digital strategy to strengthen your brand’s social and industry leadership presence. By leveraging industry best practices and data-driven insights, we craft a scalable program tailored to your current needs and future growth.</p>
+                        <p className="px-4 py-4 fs-5">Enhance your cross-platform strategy with our comprehensive testing and measurement framework. Designed to unlock incremental gains and foster sustainable growth, our approach ensures optimized performance and higher ROI over time.</p>
                     </div>
                 </div>
 
                 <div className="row align-items-center mb-5 whats-in">
                     <div className="col-md-4 p-4 services-sub">
-                        <p className="fs-3 text-center align-items-center">Industry Expertise</p>
+                        <p className="fs-3 text-center align-items-center">Robust Analytics & Insights</p>
                     </div>
                     <div className="col-md-8 p-4 services-sub-desc shadow">
-                        <p className="px-4 py-4 fs-5">As performance marketing experts and partners with the leading social platforms, we keep up-to-date with the latest digital news and trends. We are your eyes and ears to help navigate the ever-changing digital space and identify opportunities as well as pitfalls.</p>
+                        <p className="px-4 py-4 fs-5">Gain deep, real-time campaign insights with our cross-platform reporting suite. We empower you to make data-driven decisions, optimize targeting, and refine messaging for maximum impact. Our thorough performance analysis enhances campaign efficiency, ensuring optimal budget allocation and continuous optimization.</p>
                     </div>
                 </div>
                 <div className="text-center">
@@ -63,4 +63,4 @@ function Strategy(){
     )
 }
 
-export default Strategy;
+export default PaidMedia;

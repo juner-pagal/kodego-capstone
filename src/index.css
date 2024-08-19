@@ -21,10 +21,11 @@ code {
   background-color: #fff !important;
 }
 .nav-format {
-  background-color: #3581B8;
+  background-color: #113c5c;
   font-size: 1.2rem;
   padding: 20px !important;
 }
+
 .nav-link, .navbar-brand{
   color: #EBE9E9 !important ;
   padding: 10px;
@@ -102,6 +103,11 @@ video {
   text-decoration: none;
   background-color: white !important;
 }
+.whats-in{
+  background-color: #113c5c;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
 .services-holder{
   background-color: #113c5c;
   border-top-right-radius: 25px;
@@ -142,4 +148,13 @@ video {
 .get-in-touch:hover{
   border: 2px #0d4e80 solid;
   color:#bed5e6;
+}
+.inhouse button{
+  background-color: transparent !important;
+  border: 2px solid rgb(16, 99, 181) !important;
+  border-radius: 500px;
+  padding: 10px 40px;
+}
+.inhouse button:hover{
+  background-color: #FCB07E !important;
 }
