@@ -13,7 +13,8 @@ function Contact(){
 
                 <div className='col-md-6'>
                     <form>
-                        <label></label>
+                        <label>Name</label>
+                        <input type="name"></input>
                     </form>
                 </div>
             </div>
