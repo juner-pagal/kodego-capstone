@@ -3,7 +3,7 @@ import siteLogo from "../site-logo.png"
 function Footer() {
     return(
         <>
-        <div className="container-fluid" style={{backgroundColor: "#3581B8", color: "white"}}>
+        <div className="container-fluid mt-5" style={{backgroundColor: "#3581B8", color: "white"}}>
             <div className="row container">
                 <img src={siteLogo} style={{width: "100px", borderTopLeftRadius: "50%", borderBottomRightRadius: "50%"}} alt="..."/>
                 <p className="fs-5">Digital Agency</p>
