@@ -17,10 +17,10 @@ function Footer() {
                     <p className="fs-5">Services</p>
                     <div className="footer-link">
                         <ul>
-                            <li><Link to="/strategy">Strategy</Link></li>
-                            <li><Link to="/paid-media">Paid Media</Link></li>
-                            <li><Link to="/influencer-marketing">Influencer Marketing</Link></li>
-                            <li><Link to="/data-ai">Data & AI</Link></li>
+                            <li><Link to="services/strategy">Strategy</Link></li>
+                            <li><Link to="services/paid-media">Paid Media</Link></li>
+                            <li><Link to="services/influencer-marketing">Influencer Marketing</Link></li>
+                            <li><Link to="services/data-ai">Data & AI</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -46,7 +46,9 @@ function Footer() {
                 </div>
                 <div className="col-md-3 p-4">
                     <input className="form-control" type="email" name="email" placeholder="Email" required /><br></br>
-                    <button className="btn btn-primary form-control" type="button" name="submit" style={{backgroundColor: "#FCB07E"}}>Subscribe </button><br></br>
+                    <div className="text-center">
+                        <button className="btn btn-primary" type="button" name="submit" style={{padding: "10px 50px", borderRadius: "25px", border: "2px solid #ffc"}}>Subscribe </button><br></br>
+                    </div>
                     <div className="mt-3 text-center">
                         <ul>
                             <Link to="https://www.linkedin.com/"><i className="fa-brands fa-linkedin fs-5 px-2 footer-link"></i></Link>
