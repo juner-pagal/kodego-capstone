@@ -12,8 +12,10 @@ import InfluencerMarketing from '../pages/InfluencerMarketing';
 import DataAI from '../pages/DataAI';
 import InHousing from '../pages/InHousing';
 import Login from '../components/Login';
+import Logout from '../components/Logout';
 import Register from '../components/Register';
 import Forget from '../components/Forget';
+import Reset from '../components/Reset';
 import Profile from '../components/Profile';
 
 
@@ -55,9 +57,16 @@ class MyRouter extends Component {
                 <Route path='/services/data-ai' element={<DataAI />} />
                 <Route path='/services/in-housing' element={<InHousing />} />
                 <Route path='/login' element={<Login user={this.state.user} setUser={this.setUser} />}/>
+                <Route path='/logout' element={<Logout/>} />
                 <Route path='/register' element={<Register user={this.state.user} setUser={this.setUser} />}/>
                 <Route path='/forgot-password' element={<Forget />} />
+                <Route path='/reset/:id' element={<Reset />} />
                 <Route exact path='/profile' element={<Profile user={this.state.user} />}/> 
+
+
+
+                {/* Admin Router */}
+
             </>
         
         </Routes>

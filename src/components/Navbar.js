@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import siteLogo from "../site-logo.png"
-import axios from "axios";
+
 
 import React, { Component } from 'react'
 
 class Navbar extends Component {
-    state = {
-        loggedout:''
-    } 
+    // state = {
+    //     loggedout:''
+    // } 
 
     logout = () => {
         localStorage.clear();
@@ -21,7 +21,7 @@ class Navbar extends Component {
         if(localStorage.getItem('token')){
             buttons = (
                 <div>
-                    <Link className="px-3" onClick={this.logout}>Logout</Link>
+                    <Link className="px-3" to='/logout' onClick={this.logout}>Logout</Link>
                 </div> 
             )
             profile = (
@@ -53,7 +53,12 @@ class Navbar extends Component {
     <nav className="navbar navbar-expand-lg nav-format">
         <div className="container">
         <Link className="navbar-brand fs-3" to="/"><img src={siteLogo} style={{width: "60px", borderTopLeftRadius: "50%", borderBottomRightRadius: "50%"}} alt="..."/> Digital Agency</Link>
-        
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                    {/* <Link className="nav-link" to="/profile">Profile</Link> */}
+                    {profile}
+                </li>
+            </ul>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
             </button>
@@ -62,10 +67,7 @@ class Navbar extends Component {
                 <li className="nav-item">
                     <Link className="nav-link" aria-current="page" to="/">Home</Link>
                 </li>
-                <li className="nav-item">
-                    {/* <Link className="nav-link" to="/profile">Profile</Link> */}
-                    {profile}
-                </li>
+                
                 <li className="nav-item dropdown">
                     <Link className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Services
