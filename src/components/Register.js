@@ -38,8 +38,13 @@ class Register extends Component {
   render() {
     //After Register Redirect to Profile
     if(this.state.loggedIn){
-        return <Navigate to={'/profile'} />
+        return<Navigate to="/profile" />  
     }
+
+    if(localStorage.getItem('token')){
+        return<Navigate to="/profile" />  
+      }
+
     return (
         <div>
         <div className='container'>

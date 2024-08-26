@@ -19,6 +19,7 @@ import Reset from '../components/Reset';
 import Profile from '../components/Profile';
 
 
+
 import React, { Component } from 'react'
 
 class MyRouter extends Component {
@@ -61,12 +62,12 @@ class MyRouter extends Component {
                 <Route path='/register' element={<Register user={this.state.user} setUser={this.setUser} />}/>
                 <Route path='/forgot-password' element={<Forget />} />
                 <Route path='/reset/:id' element={<Reset />} />
-                <Route exact path='/profile' element={<Profile user={this.state.user} />}/> 
+                <Route path='/profile' element={<Profile user={this.state.user} setUser={this.setUser} />}/> 
 
 
 
                 {/* Admin Router */}
-
+                
             </>
         
         </Routes>

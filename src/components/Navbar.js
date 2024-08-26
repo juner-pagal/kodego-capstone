@@ -5,9 +5,9 @@ import siteLogo from "../site-logo.png"
 import React, { Component } from 'react'
 
 class Navbar extends Component {
-    // state = {
-    //     loggedout:''
-    // } 
+    state = {
+        loggedout:''
+    } 
 
     logout = () => {
         localStorage.clear();

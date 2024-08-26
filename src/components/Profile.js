@@ -1,15 +1,25 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
+import { Navigate } from 'react-router-dom';
+
 
 class Profile extends Component {
+  
   render() {
-
+        
     let name;
     let email;
     if(this.props.user){
         name = this.props.user.name;
         email = this.props.user.email;
+        console.log(name, email);
     }
-
+    
+   
+    if(!localStorage.getItem('token')){
+      return<Navigate to="/login" />  
+    }
+   
     return (
       <div>
         

@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { Component } from 'react'
-import { Link, Navigate} from 'react-router-dom';
+import { Link} from 'react-router-dom';
+import {Navigate} from 'react-router-dom';
+
 
 
 
@@ -26,15 +28,28 @@ class Login extends Component {
                 this.props.setUser(response.data.user);
             })
             .catch((error)=>{
-                console.log(error);
+                this.setState({message:error.response.data.message});
             });
     }
   render() {
     //After Login Redirect to Profile
     if(this.state.loggedIn){
-        return <Navigate to={'/profile'} />
+        return<Navigate to="/profile" />    
     }
-
+    //Show Error Message
+    let error="";
+    if(this.state.message){
+        error=(
+            <div>
+                <div className='alert alert-danger' role="alert">
+                    {this.state.message}
+                </div>
+            </div>
+        )
+    }//End of Error Message
+    if(localStorage.getItem('token')){
+        return <Navigate to="/profile" /> 
+      }
     return (
       <div>
         <div className='container'>
@@ -44,6 +59,7 @@ class Login extends Component {
 
 
                     <form className='contact-form p-4' onSubmit={this.formSubmit}>
+                    {error}
                     <label for="email" className="col-sm-2 col-form-label">Email</label>
                 <div className="row mb-3">
                     
