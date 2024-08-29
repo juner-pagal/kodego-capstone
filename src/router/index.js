@@ -4,6 +4,7 @@ import axios from 'axios';
 import Navbar from '../components/Navbar';
 import Home from '../pages/Home';
 import About from '../pages/About';
+import Values from '../components/Values';
 import Contact from '../pages/Contact';
 import Strategy from '../pages/Strategy';
 import Services from '../pages/Services';
@@ -21,6 +22,7 @@ import Profile from '../components/Profile';
 
 
 import React, { Component } from 'react'
+
 
 class MyRouter extends Component {
     state ={
@@ -50,6 +52,7 @@ class MyRouter extends Component {
             
                 <Route path='/' element={<Home />} />
                 <Route path='/about' element={<About />} />
+                <Route path='/aboutvalues' element={<Values />} />
                 <Route path='/contact' element={<Contact />} />
                 <Route path='/services' element={<Services />} />
                 <Route path='/services/strategy' element={<Strategy />}/>
@@ -63,6 +66,7 @@ class MyRouter extends Component {
                 <Route path='/forgot-password' element={<Forget />} />
                 <Route path='/reset/:id' element={<Reset />} />
                 <Route path='/profile' element={<Profile user={this.state.user} setUser={this.setUser} />}/> 
+
 
 
 

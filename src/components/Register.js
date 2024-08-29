@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import { Navigate } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 class Register extends Component {
 
     state={
@@ -39,6 +40,7 @@ class Register extends Component {
     //After Register Redirect to Profile
     if(this.state.loggedIn){
         return<Navigate to="/profile" />  
+        
     }
 
     if(localStorage.getItem('token')){

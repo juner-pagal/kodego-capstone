@@ -11,7 +11,7 @@ class Home extends Component {
         .then()
         .catch()
     }
-
+    
     componentDidMount(){
         this.GetVisitorDetails();
     }
@@ -24,4 +24,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default Home;

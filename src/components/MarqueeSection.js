@@ -13,7 +13,7 @@ import image10 from "../assets/images/marquee/ten.png";
 function MarqueeSection() {
     return (
         <>
-            <Marquee className="marquee-style mt-4 mb-5" play>
+            <Marquee className="marquee-style mt-4 mb-5 marquee-filter" play>
                 <img src={image1} alt="..."/>
                 <img src={image2} alt="..."/>
                 <img src={image3} alt="..."/>

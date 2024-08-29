@@ -2,7 +2,8 @@ import axios from 'axios';
 import React, { Component } from 'react'
 import { Link} from 'react-router-dom';
 import {Navigate} from 'react-router-dom';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -76,7 +77,9 @@ class Login extends Component {
                 </div>
                 <div className='col-md-12'>
                     <button type="submit" className="btn btn-primary form-control">Log in</button>
+                    <ToastContainer/>
                 </div>
+                
                 <div className='mt-3'>
                     Forgot Password  <Link to="/forgot-password">Click Here</Link>
                     
