@@ -1,37 +1,40 @@
 import axios from 'axios';
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Link} from 'react-router-dom';
 import {Navigate} from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-
+import AppURL from '../api/AppURL';
 
 class Login extends Component {
-    state={
-        email:'',
-        password:'',
-        message:''
-    }
-    //Login Form Submit
+
+    constructor(){
+        super();
+        this.state={
+             email:'',
+             password:'',
+             message:'',
+             loggedIn:false
+        }
+   } 
+    // Login Form Submit Method 
     formSubmit = (e) => {
         e.preventDefault();
         const data={
-            email:this.state.email,
-            password:this.state.password
+             email:this.state.email,
+             password:this.state.password
         }
-        axios.post('/login',data)
-            .then((response)=>{
-                localStorage.setItem('token',response.data.token);
-                this.setState({
-                    loggedIn:true
-                })
-                this.props.setUser(response.data.user);
-            })
-            .catch((error)=>{
-                this.setState({message:error.response.data.message});
-            });
-    }
+        axios.post(AppURL.UserLogin,data).then(response =>{ 
+
+             localStorage.setItem('token',response.data.token);
+             this.setState({loggedIn:true})
+
+             this.props.setUser(response.data.user);
+
+        }).catch(error=>{
+
+        }); 
+   }
   render() {
     //After Login Redirect to Profile
     if(this.state.loggedIn){
@@ -50,9 +53,11 @@ class Login extends Component {
     }//End of Error Message
     if(localStorage.getItem('token')){
         return <Navigate to="/profile" /> 
+        
       }
     return (
       <div>
+        <Fragment>
         <div className='container'>
             <div className='row'>
                 <div className='mt-3 col-md-4 offset-md-4'>
@@ -86,11 +91,12 @@ class Login extends Component {
                 </div>
                 
                 </form>
-
+                    
 
                 </div>
             </div>
         </div>
+        </Fragment>
       </div>
     )
   }

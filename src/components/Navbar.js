@@ -2,9 +2,36 @@ import { Link } from "react-router-dom";
 import siteLogo from "../site-logo.png"
 
 
+import axios from "axios";
 import React, { Component } from 'react'
+import AppURL from "../api/AppURL";
 
 class Navbar extends Component {
+
+    constructor(){
+        super();
+        this.state={
+            data: []       // State to store the fetched data
+            
+        }
+    }
+    componentDidMount(){
+        axios.get(AppURL.AllServices).then(response =>{
+            this.setState({
+                data: response.data,
+            });
+        }).catch(error=>{
+            if(error){
+                return "Something went wrong";
+            }
+        })
+
+    }
+
+        
+
+
+//------------------------------------------------
     state = {
         loggedout:''
     } 
@@ -15,7 +42,11 @@ class Navbar extends Component {
     }
 
   render() {         
-
+    //calling for Services menu
+    const { data } = this.state;
+    
+    
+    //end of services Menu
         let buttons;
         let profile;
         if(localStorage.getItem('token')){
@@ -72,13 +103,19 @@ class Navbar extends Component {
                     <Link className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Services
                     </Link>
-                    <ul className="dropdown-menu px-3 fs-5"  style={{backgroundColor:"#3581B8"}}>
-                        <li><Link className="nav-link" to="services/strategy">Strategy</Link></li>
-                        <li><Link className="nav-link" to="services/paid-media">Paid Media</Link></li>
-                        <li><Link className="nav-link" to="services/influencer-marketing">Influencer Marketing</Link></li>
-                        <li><Link className="nav-link" to="services/data-ai">Data & AI</Link></li>
-                        <li><Link className="nav-link" to="services/in-housing">In-Housing</Link></li>
-                    </ul>
+                    {/* <ul className="dropdown-menu px-3 fs-5"  style={{backgroundColor:"#3581B8"}}>
+                        {data.map((item, index) => (
+                            <li key={index}><Link className="nav-link" to="services/">{item.services_name}</Link></li>
+                        ))}
+                    </ul> */}
+                    
+                         <ul className="dropdown-menu px-3 fs-5"  style={{backgroundColor:"#3581B8"}}>
+                            <li><Link className="nav-link" to="services/strategy">Strategy</Link></li>
+                            <li><Link className="nav-link" to="services/paid-media">Paid Media</Link></li>
+                            <li><Link className="nav-link" to="services/influencer-marketing">Influencer Marketing</Link></li>
+                            <li><Link className="nav-link" to="services/data-ai">Data & AI</Link></li>
+                            <li><Link className="nav-link" to="services/in-housing">In-Housing</Link></li>
+                        </ul>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link" to="/about">About Us</Link>

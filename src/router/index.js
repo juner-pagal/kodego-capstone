@@ -18,6 +18,7 @@ import Register from '../components/Register';
 import Forget from '../components/Forget';
 import Reset from '../components/Reset';
 import Profile from '../components/Profile';
+import AppURL from '../api/AppURL';
 
 
 
@@ -25,23 +26,24 @@ import React, { Component } from 'react'
 
 
 class MyRouter extends Component {
-    state ={
-        user:{}
-    }
-    componentDidMount(){
-        //Login User Credentials
-        axios.get('/user')
-        .then((response) => {
-            this.setUser(response.data)
-        })
-        .catch((error) => {
-            console.log(error);
-        });
-    }
+          constructor(){
+            super();
+            this.state={
+                user:{}
+            }
+        }
 
-    setUser = (user) => {
-        this.setState({user:user})
-    }
+        componentDidMount(){
+            axios.get(AppURL.UserData).then(response =>{
+                this.setUser(response.data)
+            }).catch(error => {
+                console.log(error);
+            })
+        }
+
+        setUser = (user) =>{
+            this.setState({user:user})
+        }
   render() {
     return (
       <div>
@@ -65,10 +67,9 @@ class MyRouter extends Component {
                 <Route path='/register' element={<Register user={this.state.user} setUser={this.setUser} />}/>
                 <Route path='/forgot-password' element={<Forget />} />
                 <Route path='/reset/:id' element={<Reset />} />
-                <Route path='/profile' element={<Profile user={this.state.user} setUser={this.setUser} />}/> 
+                <Route path='/profile' element={<Profile user={this.state.user} setUser={this.setUser}  key={Date.now()} />} />
 
-
-
+                
 
                 {/* Admin Router */}
                 

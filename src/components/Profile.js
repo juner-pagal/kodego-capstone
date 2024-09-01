@@ -4,14 +4,16 @@ import { Navigate } from 'react-router-dom';
 
 
 class Profile extends Component {
-  
+  componentDidMount(){
+    window.scroll(0,0)
+  }
   render() {
-        
+    const User = this.props.user;
     let name;
     let email;
     if(this.props.user){
-        name = this.props.user.name;
-        email = this.props.user.email;
+        name= this.props.user.name;
+        email= this.props.user.email;
         console.log(name, email);
     }
     

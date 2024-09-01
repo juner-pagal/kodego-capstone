@@ -1,17 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import { Navigate } from 'react-router-dom';
+import AppURL from '../api/AppURL';
 // import { Redirect } from 'react-router-dom';
 class Register extends Component {
-
-    state={
-        name:'',
-        email:'',
-        password:'',
-        password_confirmation:'',
-        message:''
+    constructor(){
+        super();
+        this.state={
+            name:'',
+            email:'',
+            password:'',
+            password_confirmation:'',
+            message:'',
+            loggedIn: false
+        }
     }
+    
 
      //Register Form Submit
      formSubmit = (e) => {
@@ -22,7 +27,7 @@ class Register extends Component {
             password:this.state.password,
             password_confirmation:this.state.password_confirmation
         }
-        axios.post('/register',data)
+        axios.post(AppURL.UserRegister,data)
             .then((response)=>{
                 localStorage.setItem('token',response.data.token);
                 this.setState({
@@ -49,6 +54,7 @@ class Register extends Component {
 
     return (
         <div>
+        <Fragment>
         <div className='container'>
             <div className='row'>
                 <div className='mt-3 col-md-4 offset-md-4'>
@@ -92,6 +98,7 @@ class Register extends Component {
                 </div>
             </div>
         </div>
+        </Fragment>
       </div>
     )
   }
