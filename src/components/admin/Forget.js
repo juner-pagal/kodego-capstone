@@ -62,10 +62,10 @@ class Forget extends Component {
                         <button type="submit" className="btn btn-primary form-control">Reset Password</button>
                     </div>
                     <div className='mt-2'>
-                        Have An Account?  <Link to="/login">Login Now</Link>
+                        Have An Account?  <Link to="/admin/login">Login Now</Link>
                     </div>
                     <div className='mt-2'>
-                        Don't Have Account?  <Link to="/register">Register Now</Link>
+                        Don't Have Account?  <Link to="/admin/register">Register Now</Link>
                     </div>
                 
                 </form>

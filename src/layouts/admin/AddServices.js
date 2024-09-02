@@ -1,0 +1,94 @@
+import React from 'react'
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import axios from 'axios';
+import AppURL from '../../api/AppURL';
+
+
+const AddServices = () => {
+    const navigate = useNavigate();
+     
+    const[txtname, setName]= useState('');
+    const[txtcaption, setCaption] = useState('');
+    const[txtdescription, setDescription]= useState('');
+    const[fileimage, setImage]= useState('');
+    const[message, setMessage]= useState('');
+ 
+    const uploadServices= async()=>{
+        console.log(fileimage)
+        const formData= new FormData();
+        formData.append('services_name', txtname);
+        formData.append('services_caption', txtcaption)
+        formData.append('services_desc',txtdescription);
+        formData.append('services_image', fileimage);
+        const responce= await axios.post(AppURL.AddServices, formData, {
+            headers:{'Content-Type':"multipart/form-data"},
+        } );
+ 
+        if(responce)
+        {
+            console.log(responce)
+            setMessage(responce.message); //"message": "Product successfully created."
+            setTimeout(()=>{
+                navigate('/admin/serviceslist');
+            }, 2000);
+        }
+    }
+ 
+    const handleSubmit= async(e)=>{
+      e.preventDefault();
+      await uploadServices();
+ 
+   }
+  return (
+    
+        <div className="container">
+            <div className="row">
+              <div className="col-md-12 mt-4">
+                <h5 className="mb-4">Add Services </h5> 
+                <p className="text-warning">{ message}</p>                              
+                 
+                    <form onSubmit={handleSubmit}>             
+                    <div className="mb-3 row">
+                    <label  className="col-sm-3">Services Name </label>
+                    <div className="col-sm-9">
+                    <input type="text" className="form-control" onChange={ (e)=>setName(e.target.value)} required/>
+                    </div>
+                    </div>
+                    <div className="mb-3 row">
+                        <label  className="col-sm-3">Caption </label>
+                        <div className="col-sm-9">
+                            <input type="text" className="form-control" onChange={(e)=>setCaption(e.target.value)} required />
+                        </div>
+                    </div>
+                    <div className="mb-3 row">
+                        <label  className="col-sm-3">Description </label>
+                        <div className="col-sm-9">
+                            <textarea className="form-control" rows="10" onChange={(e)=>setDescription(e.target.value)} required></textarea>
+                        </div>
+                    </div>
+ 
+                    <div className="mb-3 row">
+                    <label  className="col-sm-3">Services Image</label>
+                    <div className="col-sm-9">
+                    <input type="file" className="form-control" onChange={(e)=>setImage(e.target.files[0])} required />
+                    </div>
+                    </div>
+ 
+                    <div className="mb-3 row">
+                    <label className="col-sm-3"></label>
+                    <div className="col-sm-9">
+                    <button type="submit" className="btn btn-success">Submit</button>
+                    </div>
+                    </div>
+ 
+                    </form>
+ 
+             </div>
+            </div>
+        </div>
+    
+  )
+}
+
+export default AddServices

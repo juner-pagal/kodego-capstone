@@ -8,7 +8,7 @@ class Profile extends Component {
     window.scroll(0,0)
   }
   render() {
-    const User = this.props.user;
+    const user = this.props.user;
     let name;
     let email;
     if(this.props.user){
@@ -19,7 +19,7 @@ class Profile extends Component {
     
    
     if(!localStorage.getItem('token')){
-      return<Navigate to="/login" />  
+      return<Navigate to="/admin/login" />  
     }
    
     return (

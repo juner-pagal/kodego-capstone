@@ -4,7 +4,7 @@ import { Link} from 'react-router-dom';
 import {Navigate} from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import AppURL from '../api/AppURL';
+import AppURL from '../../api/AppURL';
 
 class Login extends Component {
 
@@ -30,15 +30,15 @@ class Login extends Component {
              this.setState({loggedIn:true})
 
              this.props.setUser(response.data.user);
-
+             window.location.href = '/admin';
         }).catch(error=>{
-
+            this.setState({message:error.response.data.message});
         }); 
    }
   render() {
     //After Login Redirect to Profile
     if(this.state.loggedIn){
-        return<Navigate to="/profile" />    
+        window.location.href = '/admin';    
     }
     //Show Error Message
     let error="";
@@ -52,7 +52,7 @@ class Login extends Component {
         )
     }//End of Error Message
     if(localStorage.getItem('token')){
-        return <Navigate to="/profile" /> 
+        window.location.href = '/admin'; 
         
       }
     return (
@@ -86,7 +86,7 @@ class Login extends Component {
                 </div>
                 
                 <div className='mt-3'>
-                    Forgot Password  <Link to="/forgot-password">Click Here</Link>
+                    Forgot Password  <Link to="/admin/forgot-password">Click Here</Link>
                     
                 </div>
                 

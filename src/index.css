@@ -129,7 +129,7 @@ video {
   background-color: aliceblue;
 }
 .customer-login{
-  background-color: #0d4e80;
+  background-color: #113c5c;
 }
 .customer-login a{
   color: #FCB07E;
@@ -164,4 +164,31 @@ video {
 }
 .marquee-filter{
   filter: saturate(0);
+}
+
+/* Admin Layout */
+
+.sidebar, .navmenu{
+  background-color: #113c5c !important;
+}
+.sidebar{
+  height: 100%;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar ul li{
+  margin: 20px;
+}
+.sidebar ul li a{
+  background-color: #031c2e !important;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid rgb(16, 99, 181) !important;
+  border-radius: 500px;
+  padding: 10px 40px;
+  display: block;
+}
+.sidebar ul li a:hover{
+  background-color: #3581B8 !important;
 }

@@ -82,7 +82,7 @@ class Reset extends Component {
                     <button type="submit" className="btn btn-primary form-control">Reset Password</button>
                 </div>
                 <div className='mt-2'>
-                    Have An Account?  <Link to="/login">Login</Link>
+                    Have An Account?  <Link to="/admin/login">Login</Link>
                 </div>
                 
                 </form>

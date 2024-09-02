@@ -1,4 +1,5 @@
 class AppURL{
+  static ImageStorageURL = "http://127.0.0.1:8000/storage/"
   static BaseURL = "http://127.0.0.1:8000/api"
      static VisitorDetails = this.BaseURL+"/getvisitor"
      static PostContact = this.BaseURL+"/postcontact"
@@ -14,6 +15,13 @@ class AppURL{
      static Strategy = this.BaseURL+"/strategy"
      static StrategySub = this.BaseURL+"/strategysub"
      static StrategyDetails = this.BaseURL+"/strategydetails"
+     static AddServices = this.BaseURL+"/services"
+     static EditServices = this.BaseURL+"/servicesupdate/"
+     static DisplayServicesOnEdit = this.BaseURL+"/services/"
+     static DeleteServices = this.BaseURL+"/servicesdelete/"
+     static picStorage = this.ImageStorageURL
+     
+    
 }
 
 export default AppURL;

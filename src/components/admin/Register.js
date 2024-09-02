@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import { Navigate } from 'react-router-dom';
-import AppURL from '../api/AppURL';
+import AppURL from '../../api/AppURL';
 // import { Redirect } from 'react-router-dom';
 class Register extends Component {
     constructor(){
