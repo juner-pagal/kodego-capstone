@@ -4,7 +4,7 @@ function Services(){
         <>
         <div className="card-image-bg">
             
-            <div className="container-fluid">
+        <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-6 services-holder mt-2 mb-2 p-4">
                         <h6 className="display-6 mt-5">Strategy</h6>

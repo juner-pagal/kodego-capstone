@@ -64,7 +64,7 @@ const AddServices = () => {
                     <div className="mb-3 row">
                         <label  className="col-sm-3">Description </label>
                         <div className="col-sm-9">
-                            <textarea className="form-control" rows="10" onChange={(e)=>setDescription(e.target.value)} required></textarea>
+                            <textarea className="form-control" rows="6" onChange={(e)=>setDescription(e.target.value)} required></textarea>
                         </div>
                     </div>
  

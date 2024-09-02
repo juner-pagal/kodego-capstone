@@ -51,18 +51,18 @@ class Navbar extends Component {
     
     //end of services Menu
         let buttons;
-        // let profile;
+        let dashboard;
         if(localStorage.getItem('token')){
             buttons = (
                 <div>
                     <Link to="/admin/logout" onClick={this.logout} style={{cursor: "pointer", color:"#fff"}}>Logout</Link>
                 </div> 
             )
-            // profile = (
-            //     <div>
-            //         <Link className="nav-link" to="/admin/profile">Profile</Link>
-            //     </div>
-            // )
+            dashboard = (
+                <div>
+                    <Link className="nav-link" to="/admin">Dashboard</Link>
+                </div>
+            )
         }else{
             buttons = (
                 <div>
@@ -89,7 +89,7 @@ class Navbar extends Component {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                     {/* <Link className="nav-link" to="/profile">Profile</Link> */}
-                    {/* {profile} */}
+                    {dashboard}
                 </li>
             </ul>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
