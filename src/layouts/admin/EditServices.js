@@ -63,40 +63,40 @@ const EditServices = () => {
     }
      
     return(
-    <React.Fragment>
+    
         <div className="container">
             <div className="row">
-              <div className="col-md-8 mt-4">
-                <h5 className="mb-4">Edit Services </h5> 
+              <div className="col-md-8 m-auto mt-4">
+                <h5 className="mb-4 display-5 text-center">Edit Services </h5> 
                 <p className="text-success"><b>{ message }</b></p>                              
                  
                     <form onSubmit={ handleSubmit}>             
                     <div className="mb-3 row">
                     <label  className="col-sm-3">Services Name </label>
                     <div className="col-sm-9">
-                        <input type="text" value={inputs.services_name} className="form-control" name="services_name" onChange={ handleChange} required/>
+                        <input type="text" value={inputs.services_name} className="form-control border border-primary-subtle" name="services_name" onChange={ handleChange} required/>
                     </div>
                     </div>
 
                     <div className="mb-3 row">
                     <label  className="col-sm-3">Services Caption </label>
                     <div className="col-sm-9">
-                        <input type="text" value={inputs.services_caption} className="form-control" name="services_caption" onChange={ handleChange} required/>
+                        <input type="text" value={inputs.services_caption} className="form-control border border-primary-subtle" name="services_caption" onChange={ handleChange} required/>
                     </div>
                     </div>
  
                     <div className="mb-3 row">
                     <label  className="col-sm-3">Description </label>
                     <div className="col-sm-9">
-                        <textarea value={inputs.services_desc} className="form-control" name="services_desc" onChange={ handleChange} rows="5" required></textarea>
+                        <textarea value={inputs.services_desc} className="form-control border border-primary-subtle" name="services_desc" onChange={ handleChange} rows="5" required></textarea>
                     </div>
                     </div>
  
                     <div className="mb-3 row">
                     <label  className="col-sm-3">Services Image</label>
                     <div className="col-sm-9">
-                        <img src={AppURL.picStorage+`${inputs.services_image}`} alt="" height={300} width={300}  />
-                        <input type="file" className="form-control mt-2" onChange={(e)=>setImage(e.target.files[0])} required/>
+                        <img src={AppURL.picStorage+`${inputs.services_image}`} alt="" height={200} width={200}  />
+                        <input type="file" className="form-control mt-2 border border-primary-subtle" onChange={(e)=>setImage(e.target.files[0])} required/>
                     </div>
                     </div>
  
@@ -113,7 +113,7 @@ const EditServices = () => {
              </div>
             </div>
         </div>
-    </React.Fragment>
+    
     );
 }
 

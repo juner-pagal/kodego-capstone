@@ -24,12 +24,13 @@ const ServicesList = () => {
   
     const handleDeleteClick = (service) => {
         setSelectedService(service);
+        alert(selectedService);
     }
    
     const deleteServices = (id) => {
         axios.delete(AppURL.DeleteServices+id).then(function(response){
             console.log(response.data);
-            if(response.status == 200){
+            if(response.status === 200){
               toast.success("Record Successfully Deleted")
               
               setTimeout(()=>{

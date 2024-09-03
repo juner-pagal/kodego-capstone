@@ -74,11 +74,10 @@ class Strategy extends Component {
                         <Link to="/contact"><button className="btn btn-primary mt-4 mb-4" >GET STARTED</button></Link>
                     </div> 
                     <div className="col-md-6 text-center">
-                    <img src={item.services_image} style={{width: "35rem", padding: "0px"}} alt="..."/>
+                    <img src={AppURL.ImageStorageURL+`${item.services_image}`} style={{width: "35rem", padding: "0px"}} alt="..."/>
                     </div>  
                     </>
                 ))}
-                    
                     
                 </div>
             </div>

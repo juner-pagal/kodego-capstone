@@ -5,22 +5,23 @@ import axios from 'axios';
 import AppURL from '../../api/AppURL';
 
 
-const AddServices = () => {
+const AddTeamMembers = () => {
     const navigate = useNavigate();
-     
-    const[txtname, setName]= useState('');
-    const[txtcaption, setCaption] = useState('');
-    const[txtdescription, setDescription]= useState('');
+    
     const[fileimage, setImage]= useState('');
+    const[txtname, setName]= useState('');
+    const[txtposition, setCaption] = useState('');
+    const[txtdescription, setDescription]= useState('');
     const[message, setMessage]= useState('');
  
     const uploadServices= async()=>{
         console.log(fileimage)
         const formData= new FormData();
-        formData.append('services_name', txtname);
-        formData.append('services_caption', txtcaption)
-        formData.append('services_desc',txtdescription);
-        formData.append('services_image', fileimage);
+        formData.append('image', fileimage);
+        formData.append('name', txtname);
+        formData.append('position', txtposition)
+        formData.append('desc',txtdescription);
+        
         const responce= await axios.post(AppURL.AddServices, formData, {
             headers:{'Content-Type':"multipart/form-data"},
         } );
@@ -91,4 +92,4 @@ const AddServices = () => {
   )
 }
 
-export default AddServices
+export default AddTeamMembers;

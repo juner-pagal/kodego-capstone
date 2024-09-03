@@ -20,6 +20,8 @@ class AppURL{
      static DisplayServicesOnEdit = this.BaseURL+"/services/"
      static DeleteServices = this.BaseURL+"/servicesdelete/"
      static picStorage = this.ImageStorageURL
+
+     static ServicesAddSection1 = this.BaseURL+"/addsubservices"
      
     
 }

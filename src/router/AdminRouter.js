@@ -13,6 +13,9 @@ import AppURL from '../api/AppURL';
 import AddServices from '../layouts/admin/AddServices';
 import EditServices from '../layouts/admin/EditServices';
 import ServicesList from '../layouts/admin/ServicesList';
+// import AddServiceDetails from '../layouts/admin/AddServiceDetails';
+import AddServiceDetailsNew from '../layouts/admin/AddServiceDetailsNew';
+
 
 class AdminRouter extends Component {
   constructor(){
@@ -51,6 +54,8 @@ setUser = (user) =>{
                   <Route path="/admin/addservices" element={<AddServices />} />
                   <Route path="/admin/editservices/:id/edit" element={<EditServices />} />
                   <Route path='/admin/serviceslist' element={<ServicesList />} />
+                  <Route path='/admin/services/add-service-details' element={<AddServiceDetailsNew />} />
+                  
                 {/* /* Admin Router * */}
                 
             
