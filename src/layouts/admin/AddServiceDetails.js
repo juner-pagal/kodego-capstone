@@ -68,8 +68,8 @@ const AddServiceDetails = () => {
  
     const handleSubmit= async(e)=>{
       e.preventDefault();
-    //   await addServicesSection1();
-    alert(selectedServiceId+" "+selectedServiceName+" "+subServices+" "+subServicesDesc);
+      await addServicesSection1();
+    // alert(selectedServiceId+" "+selectedServiceName+" "+subServices+" "+subServicesDesc);
  
    }
   return (

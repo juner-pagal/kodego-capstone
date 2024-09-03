@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AppURL from '../../api/AppURL';
 
 class Login extends Component {
-
+    
     constructor(){
         super();
         this.state={
@@ -18,6 +18,7 @@ class Login extends Component {
         }
    } 
     // Login Form Submit Method 
+    
     formSubmit = (e) => {
         e.preventDefault();
         const data={
@@ -53,7 +54,7 @@ class Login extends Component {
     }//End of Error Message
     if(localStorage.getItem('token')){
         window.location.href = '/admin'; 
-        
+        // window.location.reload();
       }
     return (
       <div>

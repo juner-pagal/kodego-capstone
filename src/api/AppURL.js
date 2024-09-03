@@ -23,7 +23,7 @@ class AppURL{
 
      static ServicesAddSection1 = this.BaseURL+"/addsubservices"
      
-    
+     static AddTeamMember = this.BaseURL+"/addteammembers"
 }
 
 export default AppURL;

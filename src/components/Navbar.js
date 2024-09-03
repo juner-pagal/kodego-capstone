@@ -75,7 +75,7 @@ class Navbar extends Component {
             
             <nav className="navbar navbar-expand-lg nav-format">
                 <div className="container">
-                <Link className="navbar-brand fs-3" to="/"><img src={siteLogo} style={{width: "60px", borderTopLeftRadius: "50%", borderBottomRightRadius: "50%"}} alt="..."/> Digital Agency</Link>
+                <Link className="navbar-brand fs-3" to="/"><img src="https://junerpagal.com/images/images/site-logo.png" style={{width: "60px", borderTopLeftRadius: "50%", borderBottomRightRadius: "50%"}} alt="..."/> Digital Agency</Link>
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             {/* <Link className="nav-link" to="/profile">Profile</Link> */}

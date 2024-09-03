@@ -41,6 +41,11 @@ class Navbar extends Component {
         localStorage.clear();
         // this.props.setUser(null);
         return <MyRouter />
+        // Redirect to the login page or homepage (optional)
+        window.location.href = "/admin/login"; // or "/"
+
+        // Reload the page
+        window.location.reload();
         
     }
 
@@ -55,7 +60,7 @@ class Navbar extends Component {
         if(localStorage.getItem('token')){
             buttons = (
                 <div>
-                    <Link to="/admin/logout" onClick={this.logout} style={{cursor: "pointer", color:"#fff"}}>Logout</Link>
+                    <Link to="/admin/login" onClick={this.logout} style={{cursor: "pointer", color:"#fff"}}>Logout</Link>
                 </div> 
             )
             dashboard = (
@@ -85,7 +90,7 @@ class Navbar extends Component {
         </div>
     <nav className="navbar navbar-expand-lg nav-format">
         <div className="container">
-        <img src={siteLogo} style={{width: "60px", borderTopLeftRadius: "50%", borderBottomRightRadius: "50%"}} alt="..."/> <p className="px-2" style={{color: "#fff"}}>Digital Agency</p>
+        <img src="https://junerpagal.com/images/images/site-logo.png" style={{width: "60px", borderTopLeftRadius: "50%", borderBottomRightRadius: "50%"}} alt="..."/> <p className="px-2" style={{color: "#fff"}}>Digital Agency</p>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                     {/* <Link className="nav-link" to="/profile">Profile</Link> */}
@@ -114,11 +119,21 @@ class Navbar extends Component {
                     </ul>
             </li>
 
+            <li className="nav-item dropdown">
+                <Link className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Team
+                </Link>
+                    <ul className="dropdown-menu p-2"  style={{backgroundColor:"#3581B8"}}>
+                        <li><Link className="nav-link" to="/admin/team/team-list">Team Member</Link></li>
+                        <li><Link className="nav-link" to="/admin/team/add-team">Add Team Member</Link></li>
+                        
+                    </ul>
+            </li>
                 <li className="nav-item">
-                <Link className="nav-link" to="admin/about">About Us</Link>
+                <Link className="nav-link" to="admin/aboutpage">About Page</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link" to="admin/contact">Contact Us</Link>
+                <Link className="nav-link" to="admin/contactpage">Contact Page</Link>
                 </li>
                 
             </ul>

@@ -4,6 +4,7 @@ import InhouseExpert from "../assets/images/services/inhouse-expert.png";
 import InhouseTraining from "../assets/images/services/inhouse-training.png";
 import InhouseCollaborate from "../assets/images/services/inhouse-collaborate.png";
 import InhouseEducation from "../assets/images/services/inhouse-education.png";
+import { Link } from "react-router-dom";
 
 function InHousing(){
     return(
@@ -15,10 +16,10 @@ function InHousing(){
                         <h6 className="display-6 mt-5">In-Housing</h6>
                         <h5 className="display-5 fw-bolder mt-4">Transition Your Digital Program In-House Efficiently</h5>
                         <p className="fs-5 mt-4">Harness expert knowledge to build your own marketing powerhouse</p>
-                        <button type="submit" className="btn btn-primary mt-4 mb-4">GET STARTED</button>
+                        <Link to="/contact"><button className="btn btn-primary mt-4 mb-4" >GET STARTED</button></Link>
                     </div>
                     <div className="col-md-6 text-center">
-                        <img src={servicesInHousing} style={{width: "35rem", padding: "0px"}} alt="..."/>
+                        <img src="https://junerpagal.com/images/images/services/services-in-housing.png" style={{width: "35rem", padding: "0px"}} alt="..."/>
                     </div>
                 </div>
             </div>
@@ -66,13 +67,13 @@ function InHousing(){
                 <div className="row">
                     <h6 className="display-6 mt-5 mb-5 fw-bold text-center">Build Your Own Expert Paid Digital Team In-House</h6>
                     <div className="col-md-6 text-center">
-                        <img src={InhouseExpert} style={{width: "35rem", padding: "0px"}} alt="..."/>
+                        <img src="https://junerpagal.com/images/images/services/inhouse-expert.png" style={{width: "35rem", padding: "0px"}} alt="..."/>
                     </div>
                     <div className="col-md-6 p-5">
                         <p className="fs-4 fw-bold">Interview & Hire</p>
                         <p className="fs-5">We alleviate the burden of talent acquisition by expertly handling the interview and hiring process. We streamline candidate selection, ensuring alignment with your brand’s goals. With our support, you’ll build a high-performing in-house team that drives exceptional results.</p>
                         <div className="inhouse">
-                            <button type="submit" className="btn custom-btn mt-4 mb-4">LEARN MORE</button>
+                            <Link to="/contact"><button type="submit" className="btn custom-btn mt-4 mb-4">LEARN MORE</button></Link>
                         </div>
                     </div>
 
@@ -81,21 +82,21 @@ function InHousing(){
                         <p className="fs-4 fw-bold">Tailored Training</p>
                         <p className="fs-5">Elevate your team’s skills with proven, tailored training programs. Our customized approach ensures that each member receives the knowledge and tools necessary to excel in their roles, driving performance and innovation within your organization.</p>
                         <div className="inhouse">
-                            <button type="submit" className="btn custom-btn mt-4 mb-4">LEARN MORE</button>
+                        <Link to="/contact"><button type="submit" className="btn custom-btn mt-4 mb-4">LEARN MORE</button></Link>
                         </div>
                     </div>
                     <div className="col-md-6 text-center">
-                        <img src={InhouseTraining} style={{width: "35rem", padding: "0px"}} alt="..."/>
+                        <img src="https://junerpagal.com/images/images/services/inhouse-training.png" style={{width: "35rem", padding: "0px"}} alt="..."/>
                     </div>
 
                     <div className="col-md-6 text-center">
-                        <img src={InhouseCollaborate} style={{width: "35rem", padding: "0px"}} alt="..."/>
+                        <img src="https://junerpagal.com/images/images/services/inhouse-collaborate.png" style={{width: "35rem", padding: "0px"}} alt="..."/>
                     </div>
                     <div className="col-md-6 p-5">
                         <p className="fs-4 fw-bold">Collaborate & Strategize</p>
                         <p className="fs-5">Gain access to dedicated support and consultation through scheduled office hours with our experts. Whether you need assistance with strategy development, campaign optimization, or troubleshooting, our team is readily available to provide guidance and solutions to propel your digital marketing efforts forward.</p>
                         <div className="inhouse">
-                            <button type="submit" className="btn custom-btn mt-4 mb-4">LEARN MORE</button>
+                            <Link to="/contact"><button type="submit" className="btn custom-btn mt-4 mb-4">LEARN MORE</button></Link>
                         </div>
                     </div>
 
@@ -103,11 +104,11 @@ function InHousing(){
                         <p className="fs-4 fw-bold">Continued Education</p>
                         <p className="fs-5">Stay ahead of the curve with our continued education resources, including workshops, on-site visits, and shared industry insights. We provide ongoing learning opportunities to keep your team informed about the latest trends, technologies, and best practices in digital marketing, ensuring success after your program has been transitioned.</p>
                         <div className="inhouse">
-                            <button type="submit" className="btn custom-btn mt-4 mb-4">LEARN MORE</button>
+                            <Link to="/contact"><button type="submit" className="btn custom-btn mt-4 mb-4">LEARN MORE</button></Link>
                         </div>
                     </div>
                     <div className="col-md-6 text-center">
-                        <img src={InhouseEducation} style={{width: "35rem", padding: "0px"}} alt="..."/>
+                        <img src="https://junerpagal.com/images/images/services/inhouse-education.png" style={{width: "35rem", padding: "0px"}} alt="..."/>
                     </div>
 
                 </div>

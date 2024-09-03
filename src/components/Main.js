@@ -20,7 +20,7 @@ const Main = () => {
         return(
         <>
                 <div className="carousel-inner c-item">  
-                    <video src={videoBackground} autoPlay loop muted ></video>
+                    <video src="https://junerpagal.com/images/digital-marketing-discussion.mp4" autoPlay loop muted ></video>
                     {/* https://pixabay.com/videos/digital-affiliate-marketing-110124/ */}
                     <div className="carousel-caption top-0 mt-5">
                         <h1 className="display-2 fw-bolder text-capitalize">We are a Growth-Focused</h1>
@@ -50,7 +50,7 @@ const Main = () => {
                     <div className="row">
                             <div className="card mx-auto mt-3" style={{width: "22rem", padding: "0px"}}>
                                 <div className="h-100">
-                                    <img src={influencer} className="card-img-top card-image-bg" alt="..." style={{margin: "0px 0px"}}/>
+                                    <img src="https://junerpagal.com/images/images/our-work/influencer.png"  className="card-img-top card-image-bg" alt="..." style={{margin: "0px 0px"}}/>
                                     <div className="card-body">
                                         <h5 className="card-title">Custome influencer strategy drives QSR promo awareness</h5>
                                         {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
@@ -66,7 +66,7 @@ const Main = () => {
                             
                             <div className="card mx-auto mt-3" style={{width: "22rem", padding: "0px"}}>
                                 <div className="h-100">
-                                    <img src={funnel} className="card-img-top card-image-bg" alt="..."/>
+                                    <img src="https://junerpagal.com/images/images/our-work/funnel-strategy.png" className="card-img-top card-image-bg" alt="..."/>
                                     <div className="card-body">
                                         <h5 className="card-title">Full-funnel strategy drives enhanced ROAS for Restore Hyper Wellness</h5>
                                         {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
@@ -82,7 +82,7 @@ const Main = () => {
                             
                             <div className="card mx-auto mt-3" style={{width: "22rem", padding: "0px"}}>
                                 <div className="h-100">
-                                    <img src={drivingSales} className="card-img-top card-image-bg" alt="..."/>
+                                    <img src="https://junerpagal.com/images/images/our-work/driving-sales.png" className="card-img-top card-image-bg" alt="..."/>
                                     <div className="card-body">
                                         <h5 className="card-title">Driving Sales and Efficiency for an Electronic Retailer</h5>
                                         {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}

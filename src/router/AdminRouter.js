@@ -13,8 +13,13 @@ import AppURL from '../api/AppURL';
 import AddServices from '../layouts/admin/AddServices';
 import EditServices from '../layouts/admin/EditServices';
 import ServicesList from '../layouts/admin/ServicesList';
-// import AddServiceDetails from '../layouts/admin/AddServiceDetails';
-import AddServiceDetailsNew from '../layouts/admin/AddServiceDetailsNew';
+import AddServiceDetails from '../layouts/admin/AddServiceDetails';
+// import AddServiceDetailsNew from '../layouts/admin/AddServiceDetailsNew';
+import AddTeamMembers from '../layouts/admin/AddTeamMembers';
+import TeamMemberList from '../layouts/admin/TeamMemberList';
+import Footer from '../layouts/admin/Footer';
+import About from '../pages/About';
+import Contact from '../layouts/admin/Contact';
 
 
 class AdminRouter extends Component {
@@ -41,6 +46,7 @@ setUser = (user) =>{
       <div>
         <>
         <Navbar />
+        
         <Routes>
                 <Route path='/admin' element={<MasterLayout user={this.state.user} setUser={this.setUser} />} />
                   <Route path='/admin/login' element={<Login user={this.state.user} setUser={this.setUser} />}/>
@@ -54,17 +60,21 @@ setUser = (user) =>{
                   <Route path="/admin/addservices" element={<AddServices />} />
                   <Route path="/admin/editservices/:id/edit" element={<EditServices />} />
                   <Route path='/admin/serviceslist' element={<ServicesList />} />
-                  <Route path='/admin/services/add-service-details' element={<AddServiceDetailsNew />} />
+                  <Route path='/admin/services/add-service-details' element={<AddServiceDetails />} />
                   
+                  <Route path='/admin/team/add-team' element={<AddTeamMembers/>} />
+                  <Route path='/admin/team/team-list' element={<TeamMemberList />} />
+                  <Route path='/admin/aboutpage' element={<About />} />
+                  <Route path='/admin/contactpage' element={<Contact />} />
+                  <Route path='/admin/logout' element={<Logout />} />
                 {/* /* Admin Router * */}
-                
-            
-        
         </Routes>
+        <Footer />
         </>
       </div>
     )
   }
 }
+
 
 export default AdminRouter

@@ -1,5 +1,6 @@
 import servicesDataAI from "../assets/images/services/services-data-ai.png";
 import MarqueeSection from "../components/MarqueeSection";
+import { Link } from "react-router-dom";
 function DataAI(){
     return(
         <>
@@ -10,10 +11,10 @@ function DataAI(){
                         <h6 className="display-6 mt-5">Data & AI</h6>
                         <h5 className="display-5 fw-bolder mt-4">Harness Multichannel Analytics for a Deeper Understanding of Your Data</h5>
                         <p className="fs-5 mt-4">Gathered in one unified place, interpreted by experts, maximizing ROAS</p>
-                        <button type="submit" className="btn btn-primary mt-4 mb-4">GET STARTED</button>
+                        <Link to="/contact"><button className="btn btn-primary mt-4 mb-4" >GET STARTED</button></Link>
                     </div>
                     <div className="col-md-6 text-center">
-                        <img src={servicesDataAI} style={{width: "35rem", padding: "0px"}} alt="..."/>
+                        <img src="https://junerpagal.com/images/images/services/services-data-ai.png" style={{width: "35rem", padding: "0px"}} alt="..."/>
                     </div>
                 </div>
             </div>
@@ -48,7 +49,7 @@ function DataAI(){
                     </div>
                 </div>
                 <div className="text-center">
-                    <button className="get-in-touch fs-4" type="button">GET IN TOUCH</button>
+                <Link to="/contact"><button className="get-in-touch fs-4" >GET IN TOUCH</button></Link>
                 </div>
             </div>
             <div className="container-fluid">

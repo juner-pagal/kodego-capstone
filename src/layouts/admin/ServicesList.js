@@ -24,7 +24,7 @@ const ServicesList = () => {
   
     const handleDeleteClick = (service) => {
         setSelectedService(service);
-        alert(selectedService);
+        // alert(selectedService);
     }
    
     const deleteServices = (id) => {

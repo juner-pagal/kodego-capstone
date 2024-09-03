@@ -36,7 +36,7 @@ class WhatWeDo extends Component {
                 ))
                 }  
             </div>
-        // </div>
+         </div>
     )
   }
 }
